@@ -25,7 +25,44 @@ To the best of your ability, create a system design of a database schema that me
 
 ## Schema description
 
+The DB should include following entities:
 
+- Guest
+  - PK Guest_id
+- Manager
+  - PK Manager_id
+- Room
+  - PK Room_id
+  - FK Amenity_id
+  - FK_Location_id
+  - FK_Price_modifier_id
+- Location
+  - PK_Location_id
+- Amenity
+  - PK_Amenity_id
+- Action
+  - PK_Action_id
+  - FK_Bill_id
+  - FK_Payment_id
+  - FK_Reservation_id
+  - FK_Staying_id
+  - FK_Manager_id
+- Bill
+  - PK_Bill_id
+  - FK_Guest_id
+- Payment
+  - PK_Payment_id
+  - FK_Guest_id
+- Reservation
+  - PK_Reservation_id
+  - FK_Guest_id
+  - FK_Room_id
+- Staying
+  - PK_Staying_id
+  - FK_Guest_id
+  - FK_Room_id
+
+All relationships are shown in the diagram below.
 
 ## Screenshots
 
